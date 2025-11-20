@@ -1,0 +1,43 @@
+<div class="age-wrapper">
+  <div class="age-card">
+
+    <section class="inputs">
+      <div class="input-group">
+        <label>Day</label>
+        <input type="number" placeholder="DD" [(ngModel)]="formValues.day"/>
+      </div>
+
+      <div class="input-group">
+        <label>Month</label>
+        <input type="number" placeholder="MM" [(ngModel)]="formValues.month" />
+      </div>
+
+      <div class="input-group">
+        <label>Year</label>
+        <input type="number" placeholder="YYYY" [(ngModel)]="formValues.year"/>
+      </div>
+    </section>
+
+    <button class="calculate-btn" (click)="calculate()">
+      <img src="assets/icons/icon-arrow.svg" alt="Calculate" />
+    </button>
+
+    <section class="results">
+      <div class="result-line">
+        <span class="value">{{ age.year }}</span>
+        <span class="label">years</span>
+      </div>
+
+      <div class="result-line">
+        <span class="value">{{ age.month }}</span>
+        <span class="label">months</span>
+      </div>
+
+      <div class="result-line">
+        <span class="value">{{ age.day }}</span>
+        <span class="label">days</span>
+      </div>
+    </section>
+
+  </div>
+</div>

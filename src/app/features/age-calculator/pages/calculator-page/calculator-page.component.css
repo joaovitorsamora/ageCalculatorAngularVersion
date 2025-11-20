@@ -1,0 +1,138 @@
+:root {
+  --bg: #f4f4f7;
+  --card: #ffffff;
+  --primary: #222222;
+  --accent: #6c63ff;
+  --danger: #ff6565;
+  --text-light: #6b6b6b;
+  --radius: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  padding: 2rem;
+}
+
+.age-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.age-card {
+  background: radial-gradient(black, transparent);
+  background-size: 200% 200%;
+  animation: moveGradient 6s infinite alternate;
+  background-position: 0% 0%;
+  padding: 2.5rem;
+  border-radius: 1.6rem;
+  width: 100%;
+  box-shadow: 0 12px 24px #0001;
+  position: relative;
+  max-width: 816px;
+  height: 100vh;
+  max-height: 500px;
+}
+
+.inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-group label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.input-group input {
+  padding: 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.calculate-btn {
+  background: var(--primary);
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 2.5rem;
+  top: 7.7rem;
+  transition: 0.2s ease;
+}
+
+.calculate-btn:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+}
+
+.calculate-btn img {
+  width: 28px;
+}
+
+.results {
+  margin-top: 3.5rem;
+}
+
+.result-line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.result-line .value {
+  font-size: 3rem;
+  color: var(--accent);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.result-line .label {
+  font-size: 2rem;
+  color: var(--primary);
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .age-card {
+    padding: 2rem;
+  }
+
+  .calculate-btn {
+    right: 1.5rem;
+  }
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position-x: 0%;
+        background-position-y: 100%;
+    }
+    100% {
+        background-position-x: 100%;
+        background-position-y: 0%;
+    }
+
+}
